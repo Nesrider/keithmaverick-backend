@@ -3,7 +3,16 @@ import MySQLdb
 def getDBinfo():
 	fileName = "/Users/Ns/Documents/mysqldb.txt"
 	dbFile = open(fileName, 'r')
-	return dbFile.readlines()
+	dbInfo = dbFile.readlines()
+
+	for i in xrange(len(dbInfo)):
+		dbInfo[i] = dbInfo[i].strip('\n')
+		if (i == 2):
+			print(dbInfo[i])
+
+	return dbInfo
+
+
 
 def connection():
 		
