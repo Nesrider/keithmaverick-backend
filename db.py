@@ -5,6 +5,12 @@ import gc
 import json
 
 
+def addCor(response):
+	response.headers.add('Access-Control-Allow-Origin', '*');
+	response.headers.add('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+	response.headers.add('Access-Control-Allow-Headers', 'Content-Type');
+	return response;
+
 #Takes the returned sql query and converts
 #it into a dictionary format
 def toDict(sqlData, Header, table_name):

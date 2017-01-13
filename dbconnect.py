@@ -7,8 +7,6 @@ def getDBinfo():
 
 	for i in xrange(len(dbInfo)):
 		dbInfo[i] = dbInfo[i].strip('\n')
-		if (i == 2):
-			print(dbInfo[i])
 
 	return dbInfo
 
